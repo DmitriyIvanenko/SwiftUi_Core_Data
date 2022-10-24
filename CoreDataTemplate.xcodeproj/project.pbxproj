@@ -15,6 +15,7 @@
 		61E404102903EBCF000112BD /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E4040F2903EBCF000112BD /* DataController.swift */; };
 		61E92D7B2906803E00ADF045 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E92D7A2906803E00ADF045 /* AddBookView.swift */; };
 		61E92D7D2906883400ADF045 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E92D7C2906883400ADF045 /* RatingView.swift */; };
+		61E92D812906DCC700ADF045 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E92D802906DCC700ADF045 /* EmojiRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		61E4040F2903EBCF000112BD /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		61E92D7A2906803E00ADF045 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		61E92D7C2906883400ADF045 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		61E92D802906DCC700ADF045 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				61E403FE2903EAFB000112BD /* ContentView.swift */,
 				61E92D7A2906803E00ADF045 /* AddBookView.swift */,
 				61E92D7C2906883400ADF045 /* RatingView.swift */,
+				61E92D802906DCC700ADF045 /* EmojiRatingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			files = (
 				61E403FF2903EAFB000112BD /* ContentView.swift in Sources */,
 				61E404102903EBCF000112BD /* DataController.swift in Sources */,
+				61E92D812906DCC700ADF045 /* EmojiRatingView.swift in Sources */,
 				61E403FD2903EAFB000112BD /* CoreDataTemplateApp.swift in Sources */,
 				61E92D7D2906883400ADF045 /* RatingView.swift in Sources */,
 				61E4040E2903EB52000112BD /* CoreDataModel.xcdatamodeld in Sources */,
