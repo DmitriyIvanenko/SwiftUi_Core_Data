@@ -15,14 +15,14 @@ struct ContentView: View {
     @FetchRequest(sortDescriptors: []) var students: FetchedResults<Student>
     
     //MARK: - BODY
-
+    
     var body: some View {
         VStack {
             List(students) { studentList in
                 Text(studentList.name ?? "Unknown")
                 
             }
-            Button("Add") {
+            Button("Add New") {
                 let firstName = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
                 let lastName =  ["Granger", "Lovegood", "Potter", "Weasley"]
                 
