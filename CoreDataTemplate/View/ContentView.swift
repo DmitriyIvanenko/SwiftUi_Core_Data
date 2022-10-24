@@ -12,29 +12,28 @@ struct ContentView: View {
     //MARK: - PROPERTY
     
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var students: FetchedResults<Student>
+    @FetchRequest(sortDescriptors: []) var books: FetchedResults<Book>
+    
+    @State private var showingAddScreen = false
     
     //MARK: - BODY
     
     var body: some View {
-        VStack {
-            List(students) { student in
-                Text(student.name ?? "Unknown")
-                
-            }
-            Button("Add") {
-                let firstName = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
-                let lastName =  ["Granger", "Lovegood", "Potter", "Weasley"]
-                
-                let chousenFirstName = firstName.randomElement()!
-                let chousenLastName = lastName.randomElement()!
-                
-                let student = Student(context: moc)
-                student.id = UUID()
-                student.name = "\(chousenFirstName) \(chousenLastName)"
-                
-                try? moc.save()
-            }
+        NavigationView {
+            Text("Count: \(books.count)")
+                .navigationTitle("Bookworm")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            showingAddScreen.toggle()
+                        } label: {
+                            Label("Add Book", systemImage: "plus")
+                        }
+                    }
+                }
+                .sheet(isPresented: $showingAddScreen) {
+                    AddBookView()
+                }
         }
     }
 }
