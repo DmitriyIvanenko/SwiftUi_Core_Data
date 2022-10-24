@@ -18,20 +18,20 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            List(students) { studentList in
-                Text(studentList.name ?? "Unknown")
+            List(students) { student in
+                Text(student.name ?? "Unknown")
                 
             }
-            Button("Add New") {
+            Button("Add") {
                 let firstName = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
                 let lastName =  ["Granger", "Lovegood", "Potter", "Weasley"]
                 
                 let chousenFirstName = firstName.randomElement()!
                 let chousenLastName = lastName.randomElement()!
                 
-                let studentPerson = Student(context: moc)
-                studentPerson.id = UUID()
-                studentPerson.name = "\(chousenFirstName) \(chousenLastName)"
+                let student = Student(context: moc)
+                student.id = UUID()
+                student.name = "\(chousenFirstName) \(chousenLastName)"
                 
                 try? moc.save()
             }
